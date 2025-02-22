@@ -1,0 +1,585 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="index.css">
+    <title>index</title>
+       <!-- مكتبة ايقونات -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">    
+   <!-- ستايل الناف بار -->
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        :root {
+            --primary: #2193b0;
+            --secondary: #6dd5ed;
+            --accent: #00f2fe;
+            --dark: #0a0a0a;
+            --light: #ffffff;
+            --gradient-1: linear-gradient(120deg, #2193b0, #6dd5ed);
+            --gradient-2: linear-gradient(120deg, #00f2fe, #4facfe);
+            --glass: rgba(255, 255, 255, 0.1);
+        }
+
+        body {
+            /* background: var(--dark); */
+            color: var(--light);
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+
+        .footer {
+    font-size: 20px;
+    text-align: center;
+    margin-top: auto;
+    margin-bottom: 10px;
+    padding: 20px;
+    position: relative;
+    z-index: 1;
+  }
+  .social-links a{
+    margin: 0 10px;
+  }
+        /* Enhanced Animated Background */
+        .animated-background {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -1;
+            background: radial-gradient(circle at center, #1a1a1a 0%, #000000 100%);
+            overflow: hidden;
+        }
+
+        .gradient-sphere {
+            position: absolute;
+            border-radius: 50%;
+            filter: blur(80px);
+            opacity: 0.3;
+            animation: sphereFloat 25s infinite ease-in-out;
+        }
+
+        @keyframes sphereFloat {
+            0%, 100% { transform: translate(0, 0) scale(1) rotate(0deg); }
+            25% { transform: translate(100px, 100px) scale(1.2) rotate(90deg); }
+            50% { transform: translate(-50px, 200px) scale(0.8) rotate(180deg); }
+            75% { transform: translate(-150px, -100px) scale(1.1) rotate(270deg); }
+        }
+
+        /* Enhanced Navbar */
+        .navbar {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            z-index: 1000;
+            padding: 1.5rem 0;
+            background: rgba(0, 0, 0, 0.2);
+            backdrop-filter: blur(20px);
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+            transition: all 0.3s ease;
+        }
+
+        .navbar:hover {
+            background: rgba(0, 0, 0, 0.4);
+        }
+
+        .nav-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0 2rem;
+        }
+
+        .logo {
+            font-size: 1.8rem;
+            font-weight: 700;
+            background: linear-gradient(120deg, #00f2fe, #4facfe);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            transition: all 0.3s ease;
+            text-decoration: none;
+        }
+
+        .logo:hover {
+            transform: scale(1.05);
+            filter: brightness(1.2);
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 3rem;
+        }
+
+        .nav-link {
+            color: var(--light);
+            text-decoration: none;
+            font-weight: 500;
+            position: relative;
+            padding: 0.5rem 0;
+            transition: all 0.3s ease;
+        }
+
+        .nav-link::before {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            height: 2px;
+            background: var(--gradient-2);
+            transform: scaleX(0);
+            transform-origin: right;
+            transition: transform 0.3s ease;
+        }
+
+        .nav-link:hover {
+            color: #00f2fe;
+        }
+
+        .nav-link:hover::before {
+            transform: scaleX(1);
+            transform-origin: left;
+        }
+
+        /* Enhanced Hero Section */
+        .hero {
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero-content {
+            text-align: center;
+            max-width: 800px;
+            padding: 2rem;
+            position: relative;
+            z-index: 1;
+            animation: fadeIn 1s ease-out;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        .hero h1 {
+            font-size: 3.5rem;
+            margin-bottom: 1.5rem;
+            background: linear-gradient(120deg, #00f2fe, #4facfe);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            animation: titleFloat 3s ease-in-out infinite;
+        }
+
+        .hero p {
+            font-size: 1.3rem;
+            margin-bottom: 2.5rem;
+            color: rgba(255, 255, 255, 0.9);
+            line-height: 1.8;
+        }
+
+        /* Enhanced Button */
+        .btn, .pharma-btn {
+            position: relative;
+            padding: 1.2rem 3.5rem;
+            background: linear-gradient(120deg, #00f2fe, #4facfe);
+            color: var(--light);
+            text-decoration: none;
+            border-radius: 30px;
+            font-weight: 500;
+            border: none;
+            cursor: pointer;
+            overflow: hidden;
+            transition: all 0.3s ease;
+            box-shadow: 0 5px 15px rgba(0, 242, 254, 0.2);
+            display: inline-block;
+            margin-top: 1.5rem;
+        }
+
+        .btn:hover, .pharma-btn:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 8px 25px rgba(0, 242, 254, 0.3);
+            color: var(--light);
+        }
+
+        .btn::before, .pharma-btn::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(120deg, transparent, rgba(255, 255, 255, 0.3), transparent);
+            transition: 0.5s;
+        }
+
+        .btn:hover::before, .pharma-btn:hover::before {
+            left: 100%;
+        }
+
+        /* Enhanced Feature Cards */
+        .pharma-container {
+            max-width: 1200px;
+            margin: 80px auto;
+            padding: 0 2rem;
+        }
+
+        .pharma-section {
+            padding: 6rem 1rem;
+            position: relative;
+            z-index: 1;
+        }
+
+        .pharma-section-title {
+            text-align: center;
+            margin-bottom: 4rem;
+        }
+
+        .pharma-section-title h2 {
+            font-size: 2.8rem;
+            background: linear-gradient(120deg, #00f2fe, #4facfe);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            margin-bottom: 1rem;
+        }
+
+        .pharma-section-title p {
+            color: rgba(255, 255, 255, 0.8);
+            font-size: 1.2rem;
+        }
+
+        .pharma-features-grid, .pharma-services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+
+        .pharma-feature-card, .pharma-service-card {
+            background: rgba(255, 255, 255, 0.05);
+            backdrop-filter: blur(10px);
+            border-radius: 20px;
+            padding: 2.5rem;
+            text-align: center;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            transition: all 0.3s ease;
+        }
+
+        .pharma-feature-card:hover, .pharma-service-card:hover {
+            transform: translateY(-10px);
+            background: rgba(255, 255, 255, 0.08);
+            border-color: rgba(255, 255, 255, 0.2);
+        }
+
+        .pharma-service-icon {
+            position: relative;
+            z-index: 1;
+            font-size: 2.5rem;
+            margin-bottom: 1.5rem;
+            background: linear-gradient(120deg, #00f2fe, #4facfe);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .pharma-feature-card h3, .pharma-service-card h3 {
+            margin: 1rem 0;
+            font-size: 1.5rem;
+            color: var(--light);
+        }
+
+        .pharma-feature-card p, .pharma-service-card p {
+            color: rgba(255, 255, 255, 0.8);
+            margin-bottom: 1.5rem;
+        }
+
+        /* Enhanced Stats Section */
+        .stats-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 2rem;
+            padding: 4rem 2rem;
+            background: rgba(255, 255, 255, 0.02);
+            backdrop-filter: blur(10px);
+            margin: 4rem 0;
+        }
+
+        .stat-item {
+            text-align: center;
+            padding: 2rem;
+            transition: all 0.3s ease;
+        }
+
+        .stat-number {
+            font-size: 3.5rem;
+            font-weight: bold;
+            background: linear-gradient(120deg, #00f2fe, #4facfe);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            margin-bottom: 0.5rem;
+            display: inline-block;
+        }
+
+        .stat-item p {
+            color: rgba(255, 255, 255, 0.8);
+            font-size: 1.1rem;
+            font-weight: 500;
+        }
+
+        .stat-item:hover {
+            transform: translateY(-5px);
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .hero h1 {
+                font-size: 2.5rem;
+            }
+
+            .nav-links {
+                display: none;
+            }
+
+            .pharma-section-title h2 {
+                font-size: 2.2rem;
+            }
+        }
+    </style>
+
+<body>
+<header>
+    <!-- خلفية متحركةدوائر لونية-->
+    <!-- <div class="animated-background">
+        <div class="gradient-sphere" style="width: 600px; height: 600px; background: var(--gradient-1); top: 10%; left: 15%;"></div>
+        <div class="gradient-sphere" style="width: 500px; height: 500px; background: var(--gradient-2); top: 70%; left: 75%;"></div>
+        <div class="gradient-sphere" style="width: 400px; height: 400px; background: var(--gradient-1); top: 40%; left: 45%;"></div>
+    </div> -->
+
+    <!-- Navbar -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="#" class="logo">CodeVerse</a>
+            <div class="nav-links">
+                <a href="#hero-content" class="nav-link">Home</a>
+                <a href="#pharma-about" class="nav-link">About</a>
+                <a href="#pharma-services" class="nav-link">Services</a>
+                <a href="#" class="nav-link">Contact</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- home Section -->
+    <section class="hero" id="hero-content">
+        <div class="hero-content" >
+            <h1>Welcome to programmers world</h1>
+            <p>Your trusted site for learning programming.</p>
+            <a href="#" data-target="home.html" class="btn" id="btn" >Get Started</a>
+        </div>
+    </section>
+    
+   <!-- Services Section -->
+        <section class="pharma-section" id="pharma-services">
+            <div class="pharma-section-title">
+                <h2>Our Services</h2>
+                <p>All ready-made codes are at your fingertips</p>
+            </div>
+            <div class="pharma-services-grid">
+                <div class="pharma-service-card">
+                    <i class="fa-solid fa-code pharma-service-icon"></i>
+                    <h3>Software Services</h3>
+                    <p>Connect with expert healthcare professionals instantly for personalized consultations.</p>
+                    <a href="#" class="pharma-btn">Learn More</a>
+                </div>
+                <div class="pharma-service-card">
+                    <i class="fas fa-robot pharma-service-icon"></i>
+                    <h3>AI Sites</h3>
+                    <p>AI-powered pharmaceutical assistance for better medication management.</p>
+                    <a href="#" class="pharma-btn">Explore</a>
+                </div>
+              <div class="pharma-service-card">
+                <i class="fa-solid fa-database pharma-service-icon"></i>
+                    <h3>Database Management</h3>
+                    <p>Join our growing network of healthcare professionals and institutions.</p>
+                <a href="#" class="pharma-btn">Explore</a>
+            </div>
+        </section>
+    </div>
+
+    <div class="pharma-container">
+        <!-- About Section -->
+        <section class="pharma-section" id="pharma-about">
+            <div class="pharma-section-title">
+                <h2>About Us</h2>
+                <p>Ease of programming through technology</p>
+            </div>
+            <div class="pharma-features-grid">
+                <div class="pharma-feature-card">
+                    <i class="fa-regular fa-file-code pharma-service-icon"></i>
+                    <h3>Our Mission</h3>
+                    <p>Giving ready-made codes to novice programmers</p>
+                </div>
+                <div class="pharma-feature-card">
+                    <i class="fas fa-shield-alt pharma-service-icon"></i>
+                    <h3>Our Values</h3>
+                    <p>All codes and files are clean and free of viruses</p>
+                </div>
+                <div class="pharma-feature-card">
+                    <i class="fas fa-users pharma-service-icon"></i>
+                    <h3>Our Community</h3>
+                    <p>We seek to build a cooperative community of remote programmers</p>
+                </div>
+            </div>
+        </section>
+
+     <!-- نسويه عداد زيارات واحصائيات للموقع؟؟؟ -->
+   <!-- Stats Section -->
+    <!-- <section class="stats-container">
+        <div class="stat-item">
+            <span class="stat-number">1k+</span>
+            <p>Resources</p>
+        </div>
+        <div class="stat-item">
+            <span class="stat-number">500+</span>
+            <p>Herbal Entries</p>
+        </div>
+        <div class="stat-item">
+            <span class="stat-number">100+</span>
+            <p>Pharmacy Tools</p>
+        </div>
+        <div class="stat-item">
+            <span class="stat-number">24/7</span>
+            <p>Support</p>
+        </div>
+    </section> -->
+
+  
+    <!-- // مرور سلس بين العناصر  -->
+     <script>
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+    </script>
+    </header>
+    <div class="content">
+        <div class="section">
+            <div>
+            </div>
+        </div>
+            </div>
+        
+    
+    <canvas id="neuro"></canvas>
+    
+    
+    <script type="x-shader/x-fragment" id="vertShader">
+        precision mediump float;
+    
+        varying vec2 vUv;
+        attribute vec2 a_position;
+    
+        void main() {
+            vUv = .5 * (a_position + 1.);
+            gl_Position = vec4(a_position, 0.0, 1.0);
+        }
+    </script>
+    
+    <script type="x-shader/x-fragment" id="fragShader">
+        precision mediump float;
+    
+        varying vec2 vUv;
+        uniform float u_time;
+        uniform float u_ratio;
+        uniform vec2 u_pointer_position;
+        uniform float u_scroll_progress;
+    
+        vec2 rotate(vec2 uv, float th) {
+            return mat2(cos(th), sin(th), -sin(th), cos(th)) * uv;
+        }
+    
+        float neuro_shape(vec2 uv, float t, float p) {
+            vec2 sine_acc = vec2(0.);
+            vec2 res = vec2(0.);
+            float scale = 8.;
+    
+            for (int j = 0; j < 15; j++) {
+                uv = rotate(uv, 1.);
+                sine_acc = rotate(sine_acc, 1.);
+                vec2 layer = uv * scale + float(j) + sine_acc - t;
+                sine_acc += sin(layer);
+                res += (.5 + .5 * cos(layer)) / scale;
+                scale *= (1.2 - .07 * p);
+            }
+            return res.x + res.y;
+        }
+    
+        void main() {
+            vec2 uv = .5 * vUv;
+            uv.x *= u_ratio;
+    
+            vec2 pointer = vUv - u_pointer_position;
+            pointer.x *= u_ratio;
+            float p = clamp(length(pointer), 0., 1.);
+            p = .5 * pow(1. - p, 2.);
+    
+            float t = .001 * u_time;
+            vec3 color = vec3(0.);
+    
+            float noise = neuro_shape(uv, t, p);
+    
+            noise = 1.2 * pow(noise, 3.);
+            noise += pow(noise, 10.);
+            noise = max(.0, noise - .5);
+            noise *= (1. - length(vUv - .5));
+    
+            color = normalize(vec3(.2, .5 + .4 * cos(3. * u_scroll_progress), .5 + .5 * sin(3. * u_scroll_progress)));
+    
+            color = color * noise;
+    
+            gl_FragColor = vec4(color, noise);
+        }
+    </script>
+
+
+    <footer class="footer">
+        <small style="margin-bottom: 20px; display: inline-block">
+          © 2024 made with
+          <span style="color: red; font-size: 20px">&#10084;</span> by -
+          <a target="_blank" href=""> K/H </a>
+        </small>
+        <br />
+        <div class="social-links" >
+          <a href="" target="_blank">
+            <i class="fa-brands fa-github pharma-service-icon"></i>
+          </a>
+          <a href="" target="_blank">
+            <i class="fa-brands fa-instagram pharma-service-icon"></i>
+          </a>
+          <a href="" target="_blank">
+            <i class="fa-brands fa-tiktok pharma-service-icon"></i>
+          </a>
+          <a href="" target="_blank">
+            <i class="fa-brands fa-youtube pharma-service-icon"></i>
+          </a>
+        </div>
+      </footer>
+<script src="index.js"></script>
+</body>
+</html>

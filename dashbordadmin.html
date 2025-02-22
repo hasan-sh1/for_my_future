@@ -1,0 +1,699 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>view</title>
+    <link rel="stylesheet" href="home.css">
+     <!-- ستايل خلفية الشاشة  -->
+     <style>
+        body {
+      margin: 0;
+      padding: 0;
+      background-color: #151912;
+       overflow-x: hidden;
+  }
+  
+  .content {
+      width: 100vw;
+      font-family: 'Times New Roman', serif;
+  }
+  
+  .section {
+      width: 100%;
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      color: #FFF6F7;
+      text-align: center;
+  }
+  
+  .section > div {
+      width: 90%;
+  }
+  
+  .section:nth-child(1) {
+      font-size: 20vh;
+  }
+  
+  @media (max-width: 600px) {
+      .section:nth-child(1) {
+          font-size: 25vw;
+      }
+  }
+  
+  @media (max-width: 350px) {
+      .section:nth-child(1) {
+          font-size: 30px;
+      }
+  }
+  
+  .section:nth-child(2) {
+      font-size: 10vh;
+  }
+  
+  .section:nth-child(3) {
+      font-size: 8vh;
+  }
+  
+  .section:nth-child(2) > div {
+      max-width: 800px
+  }
+  
+  .section:nth-child(3) > div {
+      max-width: 900px
+  }
+  
+  @media (max-width: 750px) {
+      .section:nth-child(2),
+      .section:nth-child(3) {
+          font-size: 9vw;
+      }
+  }
+  
+  .section:nth-child(3) a {
+      padding: 0 .3em;
+  }
+  
+  canvas#neuro {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      pointer-events: none;
+      opacity: .95;
+      z-index: -9;
+  }
+  
+  a {
+      display: inline-block;
+      text-decoration: none;
+      color: inherit;
+      font-weight: inherit;
+      font-style: inherit;
+  }
+  
+  a:hover {
+      font-weight: inherit;
+      text-decoration: none;
+      color: rgb(160, 160, 255);
+  }
+  
+  a:active {
+      color: rgb(160, 255, 255);
+  }
+  
+  body {
+      margin: 0;
+      padding: 0;
+      background-color: #151912;
+  }
+  
+  .content {
+      width: 100vw;
+      font-family: 'Times New Roman', serif;
+  }
+  
+  .section {
+      width: 100%;
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      color: #FFF6F7;
+      text-align: center;
+  }
+  
+  .section > div {
+      width: 90%;
+  }
+  
+  .section:nth-child(1) {
+      font-size: 20vh;
+  }
+  
+  @media (max-width: 600px) {
+      .section:nth-child(1) {
+          font-size: 25vw;
+      }
+  }
+  
+  @media (max-width: 350px) {
+      .section:nth-child(1) {
+          font-size: 30px;
+      }
+  }
+  
+  .section:nth-child(2) {
+      font-size: 10vh;
+  }
+  
+  .section:nth-child(3) {
+      font-size: 8vh;
+  }
+  
+  .section:nth-child(2) > div {
+      max-width: 800px
+  }
+  
+  .section:nth-child(3) > div {
+      max-width: 900px
+  }
+  
+  @media (max-width: 750px) {
+      .section:nth-child(2),
+      .section:nth-child(3) {
+          font-size: 9vw;
+      }
+  }
+  
+  .section:nth-child(3) a {
+      padding: 0 .3em;
+  }
+  
+  canvas#neuro {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      pointer-events: none;
+      opacity: .95;
+  }
+  
+  a {
+      display: inline-block;
+      text-decoration: none;
+      color: inherit;
+      font-weight: inherit;
+      font-style: inherit;
+  }
+  
+  a:hover {
+      font-weight: inherit;
+      text-decoration: none;
+      color: rgb(160, 160, 255);
+  }
+  
+  a:active {
+      color: rgb(160, 255, 255);
+  }
+  /*/////////////////////////////////////////////////////////////////////*/
+  .hero button{
+    width: 20%;
+    cursor: pointer;
+    height: 50px;
+    color: red;
+    font-size:20px ;
+    background: rgb(69, 127, 143);
+
+  }
+  button:hover{
+    background-color: blue;
+
+  }
+  .code{
+    border:solid 1px red;
+    width: 50%;
+    height: 100vh;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    
+  }
+  
+      </style>
+  
+</head>
+<body>
+    
+
+
+
+
+
+<section class="hero" id="hero-content">
+    <div class="hero-content" >
+  <h1 class="">dashbord admin </h1>
+    </div>
+</section>
+
+<section>
+    <div class="hero" id="hero-content">
+        <button>1</button>
+        <button>2</button>
+        <button>3</button>
+        <button>4</button>
+    </div>
+</section>
+
+
+
+
+
+<section class="hero" id="hero-content">
+    <div class="code">1</div>
+    <div class="code">2</div>
+    <div class="code">2</div>
+    <div class="code">1</div>
+
+
+</section>
+
+
+
+
+
+    
+    <div class="content">
+        <div class="section">
+            <div>
+            </div>
+        </div>
+            </div>
+        
+    
+    <canvas id="neuro" ></canvas>
+  
+  
+  
+  
+      <script type="x-shader/x-fragment" id="vertShader">
+        precision mediump float;
+    
+        varying vec2 vUv;
+        attribute vec2 a_position;
+    
+        void main() {
+            vUv = .5 * (a_position + 1.);
+            gl_Position = vec4(a_position, 0.0, 1.0);
+        }
+    </script>
+    
+    <script type="x-shader/x-fragment" id="fragShader">
+        precision mediump float;
+    
+        varying vec2 vUv;
+        uniform float u_time;
+        uniform float u_ratio;
+        uniform vec2 u_pointer_position;
+        uniform float u_scroll_progress;
+    
+        vec2 rotate(vec2 uv, float th) {
+            return mat2(cos(th), sin(th), -sin(th), cos(th)) * uv;
+        }
+    
+        float neuro_shape(vec2 uv, float t, float p) {
+            vec2 sine_acc = vec2(0.);
+            vec2 res = vec2(0.);
+            float scale = 8.;
+    
+            for (int j = 0; j < 15; j++) {
+                uv = rotate(uv, 1.);
+                sine_acc = rotate(sine_acc, 1.);
+                vec2 layer = uv * scale + float(j) + sine_acc - t;
+                sine_acc += sin(layer);
+                res += (.5 + .5 * cos(layer)) / scale;
+                scale *= (1.2 - .07 * p);
+            }
+            return res.x + res.y;
+        }
+    
+        void main() {
+            vec2 uv = .5 * vUv;
+            uv.x *= u_ratio;
+    
+            vec2 pointer = vUv - u_pointer_position;
+            pointer.x *= u_ratio;
+            float p = clamp(length(pointer), 0., 1.);
+            p = .5 * pow(1. - p, 2.);
+    
+            float t = .001 * u_time;
+            vec3 color = vec3(0.);
+    
+            float noise = neuro_shape(uv, t, p);
+    
+            noise = 1.2 * pow(noise, 3.);
+            noise += pow(noise, 10.);
+            noise = max(.0, noise - .5);
+            noise *= (1. - length(vUv - .5));
+    
+            color = normalize(vec3(.2, .5 + .4 * cos(3. * u_scroll_progress), .5 + .5 * sin(3. * u_scroll_progress)));
+    
+            color = color * noise;
+    
+            gl_FragColor = vec4(color, noise);
+        }
+    </script>
+    <script src="index.js"></script>
+</body>
+</html>
